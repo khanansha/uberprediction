@@ -1,0 +1,24 @@
+<html>
+<head>
+</head>
+<body>
+
+<h3>Please enter details:</h3>
+    <br>
+    {% comment %} {%  if scoreval  %} {% endcomment %}
+    <form method="post" enctype="multipart/form-data" action="predict">
+    {% comment %} {% else %} {% endcomment %}
+    {% comment %} <form method="post" enctype="multipart/form-data" action="predictMPG"> {% endcomment %}
+    {% comment %} {% endif%} {% endcomment %}
+ {% csrf_token %}
+ <div class="col-md-4 col-sm-4"><label for="fname">Priceperweek	:</label> </div> <input name="Priceperweek" type="text" required="required"><br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Population:</label> </div> <input type="text" id="lname" name="Population" required="required"><br><br>
+ <div class="col-md-4 col-sm-4"><label for="fname">Monthlyincome:</label> </div> <input type="text" id="fname" name="Monthlyincome" required="required"><br><br>
+ <div class="col-md-4 col-sm-4"><label for="lname">Averageparkingpermonth:</label> </div> <input type="text" id="lname" name="Averageparkingpermonth" required="required"><br><br>
+ 
+ <br>
+<input type="submit" value="Submit" >
+</form>
+<h1> predict{{prediction}}
+</body>
+</html>
